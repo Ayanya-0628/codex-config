@@ -1,17 +1,47 @@
 [
     {
         "path":  "config.toml",
-        "note":  "",
-        "action":  "missing"
+        "note":  "redacted",
+        "action":  "included"
+    },
+    {
+        "path":  "auth.json",
+        "note":  "potentially sensitive or not config",
+        "action":  "excluded"
+    },
+    {
+        "path":  "history.jsonl",
+        "note":  "potentially sensitive or not config",
+        "action":  "excluded"
+    },
+    {
+        "path":  "models_cache.json",
+        "note":  "potentially sensitive or not config",
+        "action":  "excluded"
+    },
+    {
+        "path":  "sandbox.log",
+        "note":  "potentially sensitive or not config",
+        "action":  "excluded"
+    },
+    {
+        "path":  "cap_sid",
+        "note":  "potentially sensitive or not config",
+        "action":  "excluded"
+    },
+    {
+        "path":  "version.json",
+        "note":  "potentially sensitive or not config",
+        "action":  "excluded"
     },
     {
         "path":  "rules/",
-        "note":  "",
-        "action":  "missing"
+        "note":  "redacted where applicable",
+        "action":  "included"
     },
     {
         "path":  "skills/",
-        "note":  "",
-        "action":  "missing"
+        "note":  "redacted where applicable; large files skipped",
+        "action":  "included"
     }
 ]
