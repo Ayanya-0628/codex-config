@@ -41,7 +41,7 @@
     },
     {
         "path":  "skills/",
-        "note":  "IncludeSkills not set",
-        "action":  "excluded"
+        "note":  "redacted where applicable; large files skipped",
+        "action":  "included"
     }
 ]
