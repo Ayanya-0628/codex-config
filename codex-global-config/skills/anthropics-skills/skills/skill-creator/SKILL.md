@@ -12,7 +12,7 @@ This skill provides guidance for creating effective skills.
 
 Skills are modular, self-contained packages that extend Claude's capabilities by providing
 specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific
-domains or tasks—they transform Claude from a general-purpose agent into a specialized agent
+domains or tasks鈥攖hey transform Claude from a general-purpose agent into a specialized agent
 equipped with procedural knowledge that no model can fully possess.
 
 ### What Skills Provide
@@ -50,15 +50,15 @@ Every skill consists of a required SKILL.md file and optional bundled resources:
 
 ```
 skill-name/
-├── SKILL.md (required)
-�?  ├── YAML frontmatter metadata (required)
-�?  �?  ├── name: (required)
-�?  �?  └── description: (required)
-�?  └── Markdown instructions (required)
-└── Bundled Resources (optional)
-    ├── scripts/          - Executable code (Python/Bash/etc.)
-    ├── references/       - Documentation intended to be loaded into context as needed
-    └── assets/           - Files used in output (templates, icons, fonts, etc.)
+鈹溾攢鈹? SKILL.md (required)
+鈹?  鈹溾攢鈹? YAML frontmatter metadata (required)
+鈹?  鈹?  鈹溾攢鈹? name: (required)
+鈹?  鈹?  鈹斺攢鈹? description: (required)
+鈹?  鈹斺攢鈹? Markdown instructions (required)
+鈹斺攢鈹? Bundled Resources (optional)
+    鈹溾攢鈹? scripts/          - Executable code (Python/Bash/etc.)
+    鈹溾攢鈹? references/       - Documentation intended to be loaded into context as needed
+    鈹斺攢鈹? assets/           - Files used in output (templates, icons, fonts, etc.)
 ```
 
 #### SKILL.md (required)
@@ -88,7 +88,7 @@ Documentation and reference material intended to be loaded as needed into contex
 - **Use cases**: Database schemas, API documentation, domain knowledge, company policies, detailed workflow guides
 - **Benefits**: Keeps SKILL.md lean, loaded only when Claude determines it's needed
 - **Best practice**: If files are large (>10k words), include grep search patterns in SKILL.md
-- **Avoid duplication**: Information should live in either SKILL.md or references files, not both. Prefer references files for detailed information unless it's truly core to the skill—this keeps SKILL.md lean while making information discoverable without hogging the context window. Keep only essential procedural instructions and workflow guidance in SKILL.md; move detailed reference material, schemas, and examples to references files.
+- **Avoid duplication**: Information should live in either SKILL.md or references files, not both. Prefer references files for detailed information unless it's truly core to the skill鈥攖his keeps SKILL.md lean while making information discoverable without hogging the context window. Keep only essential procedural instructions and workflow guidance in SKILL.md; move detailed reference material, schemas, and examples to references files.
 
 ##### Assets (`assets/`)
 
@@ -150,12 +150,12 @@ For Skills with multiple domains, organize content by domain to avoid loading ir
 
 ```
 bigquery-skill/
-├── SKILL.md (overview and navigation)
-└── reference/
-    ├── finance.md (revenue, billing metrics)
-    ├── sales.md (opportunities, pipeline)
-    ├── product.md (API usage, features)
-    └── marketing.md (campaigns, attribution)
+鈹溾攢鈹? SKILL.md (overview and navigation)
+鈹斺攢鈹? reference/
+    鈹溾攢鈹? finance.md (revenue, billing metrics)
+    鈹溾攢鈹? sales.md (opportunities, pipeline)
+    鈹溾攢鈹? product.md (API usage, features)
+    鈹斺攢鈹? marketing.md (campaigns, attribution)
 ```
 
 When a user asks about sales metrics, Claude only reads sales.md.
@@ -164,11 +164,11 @@ Similarly, for skills supporting multiple frameworks or variants, organize by va
 
 ```
 cloud-deploy/
-├── SKILL.md (workflow + provider selection)
-└── references/
-    ├── aws.md (AWS deployment patterns)
-    ├── gcp.md (GCP deployment patterns)
-    └── azure.md (Azure deployment patterns)
+鈹溾攢鈹? SKILL.md (workflow + provider selection)
+鈹斺攢鈹? references/
+    鈹溾攢鈹? aws.md (AWS deployment patterns)
+    鈹溾攢鈹? gcp.md (GCP deployment patterns)
+    鈹斺攢鈹? azure.md (Azure deployment patterns)
 ```
 
 When the user chooses AWS, Claude only reads aws.md.

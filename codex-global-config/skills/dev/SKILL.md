@@ -24,13 +24,13 @@ These rules have HIGHEST PRIORITY and override all other instructions:
 ---
 
 **Core Responsibilities**
-- Orchestrate a streamlined 7-step development workflow (Step 0 + Step 1â€?):
+- Orchestrate a streamlined 7-step development workflow (Step 0 + Step 1éˆ¥?):
   0. Backend selection (user constrained)
   1. Requirement clarification through targeted questioning
   2. Technical analysis using codeagent-wrapper
   3. Development documentation generation
   4. Parallel development execution (backend routing per task type)
-  5. Coverage validation (â‰?0% requirement)
+  5. Coverage validation (éˆ®?0% requirement)
   6. Completion summary
 
 **Workflow Execution**
@@ -141,13 +141,13 @@ These rules have HIGHEST PRIORITY and override all other instructions:
   - MUST use Bash tool to invoke `codeagent-wrapper --parallel` for ALL code changes
   - NEVER use Edit, Write, MultiEdit, or Task tools to modify code directly
   - Backend routing (must be deterministic and enforceable):
-    - Task field: `type: default|ui|quick-fix` (missing â†?treat as `default`)
+    - Task field: `type: default|ui|quick-fix` (missing éˆ«?treat as `default`)
     - Preferred backend by type:
-      - `default` â†?`codex`
-      - `ui` â†?`gemini` (enforced when allowed)
-      - `quick-fix` â†?`claude`
-    - If user selected `ä»?codex`: all tasks MUST use `codex`
-    - Otherwise, if preferred backend is not in `allowed_backends`, fallback to the first available backend by priority: `codex` â†?`claude` â†?`gemini`
+      - `default` éˆ«?`codex`
+      - `ui` éˆ«?`gemini` (enforced when allowed)
+      - `quick-fix` éˆ«?`claude`
+    - If user selected `æµ ?codex`: all tasks MUST use `codex`
+    - Otherwise, if preferred backend is not in `allowed_backends`, fallback to the first available backend by priority: `codex` éˆ«?`claude` éˆ«?`gemini`
   - Build ONE `--parallel` config that includes all tasks in `dev-plan.md` and submit it once via Bash tool:
     ```bash
     # One shot submission - wrapper handles topology + concurrency
@@ -162,7 +162,7 @@ These rules have HIGHEST PRIORITY and override all other instructions:
     Reference: @.claude/specs/{feature_name}/dev-plan.md
     Scope: [task file scope]
     Test: [test command]
-    Deliverables: code + unit tests + coverage â‰?0% + coverage summary
+    Deliverables: code + unit tests + coverage éˆ®?0% + coverage summary
 
     ---TASK---
     id: [task-id-2]
@@ -174,7 +174,7 @@ These rules have HIGHEST PRIORITY and override all other instructions:
     Reference: @.claude/specs/{feature_name}/dev-plan.md
     Scope: [task file scope]
     Test: [test command]
-    Deliverables: code + unit tests + coverage â‰?0% + coverage summary
+    Deliverables: code + unit tests + coverage éˆ®?0% + coverage summary
     EOF
     ```
   - **Note**: Use `workdir: .` (current directory) for all tasks unless specific subdirectory is required
@@ -182,9 +182,9 @@ These rules have HIGHEST PRIORITY and override all other instructions:
   - Backend is routed deterministically based on task `type`, no manual intervention needed
 
 - **Step 5: Coverage Validation**
-  - Validate each taskâ€™s coverage:
-    - All â‰?0% â†?pass
-    - Any <90% â†?request more tests (max 2 rounds)
+  - Validate each taskéˆ¥æªš coverage:
+    - All éˆ®?0% éˆ«?pass
+    - Any <90% éˆ«?request more tests (max 2 rounds)
 
 - **Step 6: Completion Summary**
   - Provide completed task list, coverage per task, key file changes
@@ -196,13 +196,13 @@ These rules have HIGHEST PRIORITY and override all other instructions:
   - Circular dependencies: codeagent-wrapper will detect and fail with error; revise task breakdown to remove cycles
   - Missing dependencies: Ensure all task IDs referenced in `dependencies` field exist
 - **Parallel execution timeout**: Individual tasks timeout after 2 hours (configurable via CODEX_TIMEOUT); failed tasks can be retried individually
-- **Backend unavailable**: If a routed backend is unavailable, fallback to another backend in `allowed_backends` (priority: codex â†?claude â†?gemini); if none works, fail with a clear error message
+- **Backend unavailable**: If a routed backend is unavailable, fallback to another backend in `allowed_backends` (priority: codex éˆ«?claude éˆ«?gemini); if none works, fail with a clear error message
 
 **Quality Standards**
-- Code coverage â‰?0%
+- Code coverage éˆ®?0%
 - Tasks based on natural functional boundaries (typically 2-5)
 - Each task has exactly one `type: default|ui|quick-fix`
-- Backend routed by `type`: `default`â†’codex, `ui`â†’gemini, `quick-fix`â†’claude (with allowed_backends fallback)
+- Backend routed by `type`: `default`éˆ«æŠodex, `ui`éˆ«æŠ”emini, `quick-fix`éˆ«æŠlaude (with allowed_backends fallback)
 - Documentation must be minimal yet actionable
 - No verbose implementations; only essential code
 

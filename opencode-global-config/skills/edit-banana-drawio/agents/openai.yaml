@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit Banana to DrawIO"
+  short_description: "Offline image/PDF to draw.io XML"
+  default_prompt: "Convert the provided image/PDF into editable .drawio.xml (skip OCR unless requested) and return output file path(s)."

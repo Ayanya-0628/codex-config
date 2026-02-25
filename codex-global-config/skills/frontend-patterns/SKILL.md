@@ -12,7 +12,7 @@ Modern frontend patterns for React, Next.js, and performant user interfaces.
 ### Composition Over Inheritance
 
 ```typescript
-// ‚ú?GOOD: Component composition
+// ÈâÅ?GOOD: Component composition
 interface CardProps {
   children: React.ReactNode
   variant?: 'default' | 'outlined'
@@ -283,17 +283,17 @@ export function useMarkets() {
 ### Memoization
 
 ```typescript
-// ‚ú?useMemo for expensive computations
+// ÈâÅ?useMemo for expensive computations
 const sortedMarkets = useMemo(() => {
   return markets.sort((a, b) => b.volume - a.volume)
 }, [markets])
 
-// ‚ú?useCallback for functions passed to children
+// ÈâÅ?useCallback for functions passed to children
 const handleSearch = useCallback((query: string) => {
   setSearchQuery(query)
 }, [])
 
-// ‚ú?React.memo for pure components
+// ÈâÅ?React.memo for pure components
 export const MarketCard = React.memo<MarketCardProps>(({ market }) => {
   return (
     <div className="market-card">
@@ -309,7 +309,7 @@ export const MarketCard = React.memo<MarketCardProps>(({ market }) => {
 ```typescript
 import { lazy, Suspense } from 'react'
 
-// ‚ú?Lazy load heavy components
+// ÈâÅ?Lazy load heavy components
 const HeavyChart = lazy(() => import('./HeavyChart'))
 const ThreeJsBackground = lazy(() => import('./ThreeJsBackground'))
 
@@ -504,7 +504,7 @@ export class ErrorBoundary extends React.Component<
 ```typescript
 import { motion, AnimatePresence } from 'framer-motion'
 
-// ‚ú?List animations
+// ÈâÅ?List animations
 export function AnimatedMarketList({ markets }: { markets: Market[] }) {
   return (
     <AnimatePresence>
@@ -523,7 +523,7 @@ export function AnimatedMarketList({ markets }: { markets: Market[] }) {
   )
 }
 
-// ‚ú?Modal animations
+// ÈâÅ?Modal animations
 export function Modal({ isOpen, onClose, children }: ModalProps) {
   return (
     <AnimatePresence>

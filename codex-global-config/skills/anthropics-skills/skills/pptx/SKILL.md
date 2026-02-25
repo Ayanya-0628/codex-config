@@ -57,11 +57,11 @@ When creating a new PowerPoint presentation from scratch, use the **html2pptx** 
 4. **State your approach**: Explain your design choices before writing code
 
 **Requirements**:
-- �?State your content-informed design approach BEFORE writing code
-- �?Use web-safe fonts only: Arial, Helvetica, Times New Roman, Georgia, Courier New, Verdana, Tahoma, Trebuchet MS, Impact
-- �?Create clear visual hierarchy through size, weight, and color
-- �?Ensure readability: strong contrast, appropriately sized text, clean alignment
-- �?Be consistent: repeat patterns, spacing, and visual language across slides
+- 鉁?State your content-informed design approach BEFORE writing code
+- 鉁?Use web-safe fonts only: Arial, Helvetica, Times New Roman, Georgia, Courier New, Verdana, Tahoma, Trebuchet MS, Impact
+- 鉁?Create clear visual hierarchy through size, weight, and color
+- 鉁?Ensure readability: strong contrast, appropriately sized text, clean alignment
+- 鉁?Be consistent: repeat patterns, spacing, and visual language across slides
 
 #### Color Palette Selection
 
@@ -98,7 +98,7 @@ When creating a new PowerPoint presentation from scratch, use the **html2pptx** 
 **Geometric Patterns**:
 - Diagonal section dividers instead of horizontal
 - Asymmetric column widths (30/70, 40/60, 25/75)
-- Rotated text headers at 90° or 270°
+- Rotated text headers at 90掳 or 270掳
 - Circular/hexagonal frames for images
 - Triangular accent shapes in corners
 - Overlapping shapes for depth
@@ -129,7 +129,7 @@ When creating a new PowerPoint presentation from scratch, use the **html2pptx** 
 **Layout Innovations**:
 - Full-bleed images with text overlays
 - Sidebar column (20-30% width) for navigation/context
-- Modular grid systems (3×3, 4×4 blocks)
+- Modular grid systems (3脳3, 4脳4 blocks)
 - Z-pattern or F-pattern content flow
 - Floating text boxes over colored shapes
 - Magazine-style multi-column layouts
@@ -149,7 +149,7 @@ When creating a new PowerPoint presentation from scratch, use the **html2pptx** 
 
 ### Workflow
 1. **MANDATORY - READ ENTIRE FILE**: Read [`html2pptx.md`](html2pptx.md) completely from start to finish. **NEVER set any range limits when reading this file.** Read the full file content for detailed syntax, critical formatting rules, and best practices before proceeding with presentation creation.
-2. Create an HTML file for each slide with proper dimensions (e.g., 720pt × 405pt for 16:9)
+2. Create an HTML file for each slide with proper dimensions (e.g., 720pt 脳 405pt for 16:9)
    - Use `<p>`, `<h1>`-`<h6>`, `<ul>`, `<ol>` for all text content
    - Use `class="placeholder"` for areas where charts/tables will be added (render with gray background for visibility)
    - **CRITICAL**: Rasterize gradients and icons as PNG images FIRST using Sharp, then reference in HTML
@@ -317,7 +317,7 @@ When you need to create a presentation that follows an existing template's desig
    - Generate appropriate replacement content for placeholder text
    - Use shape size to determine appropriate content length
    - **CRITICAL**: Include paragraph properties from the original inventory - don't just provide text
-   - **IMPORTANT**: When bullet: true, do NOT include bullet symbols (�? -, *) in text - they're added automatically
+   - **IMPORTANT**: When bullet: true, do NOT include bullet symbols (鈥? -, *) in text - they're added automatically
    - **ESSENTIAL FORMATTING RULES**:
      - Headers/titles should typically have `"bold": true`
      - List items should have `"bullet": true, "level": 0` (level is required when bullet is true)
@@ -415,7 +415,7 @@ python scripts/thumbnail.py template.pptx [output_prefix]
 
 **Features**:
 - Creates: `thumbnails.jpg` (or `thumbnails-1.jpg`, `thumbnails-2.jpg`, etc. for large decks)
-- Default: 5 columns, max 30 slides per grid (5×6)
+- Default: 5 columns, max 30 slides per grid (5脳6)
 - Custom prefix: `python scripts/thumbnail.py template.pptx my-grid`
   - Note: The output prefix should include the path if you want output in a specific directory (e.g., `workspace/my-grid`)
 - Adjust columns: `--cols 4` (range: 3-6, affects slides per grid)

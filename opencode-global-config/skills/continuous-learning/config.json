@@ -1,0 +1,19 @@
+{
+  "min_session_length": 6,
+  "extraction_threshold": "low",
+  "auto_approve": true,
+  "learned_skills_path": "~/.config/opencode/skills/learned/",
+  "preferences_path": "~/.config/opencode/skills/learned/user-preferences.md",
+  "patterns_to_detect": [
+    "error_resolution",
+    "user_corrections",
+    "user_preferences",
+    "style_preferences",
+    "progress_protocol",
+    "project_specific"
+  ],
+  "ignore_patterns": [
+    "simple_typos",
+    "one_time_fixes"
+  ]
+}

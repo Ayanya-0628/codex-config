@@ -38,12 +38,12 @@ Universal coding standards applicable across all projects.
 ### Variable Naming
 
 ```typescript
-// �?GOOD: Descriptive names
+// 鉁?GOOD: Descriptive names
 const marketSearchQuery = 'election'
 const isUserAuthenticated = true
 const totalRevenue = 1000
 
-// �?BAD: Unclear names
+// 鉂?BAD: Unclear names
 const q = 'election'
 const flag = true
 const x = 1000
@@ -52,12 +52,12 @@ const x = 1000
 ### Function Naming
 
 ```typescript
-// �?GOOD: Verb-noun pattern
+// 鉁?GOOD: Verb-noun pattern
 async function fetchMarketData(marketId: string) { }
 function calculateSimilarity(a: number[], b: number[]) { }
 function isValidEmail(email: string): boolean { }
 
-// �?BAD: Unclear or noun-only
+// 鉂?BAD: Unclear or noun-only
 async function market(id: string) { }
 function similarity(a, b) { }
 function email(e) { }
@@ -66,7 +66,7 @@ function email(e) { }
 ### Immutability Pattern (CRITICAL)
 
 ```typescript
-// �?ALWAYS use spread operator
+// 鉁?ALWAYS use spread operator
 const updatedUser = {
   ...user,
   name: 'New Name'
@@ -74,7 +74,7 @@ const updatedUser = {
 
 const updatedArray = [...items, newItem]
 
-// �?NEVER mutate directly
+// 鉂?NEVER mutate directly
 user.name = 'New Name'  // BAD
 items.push(newItem)     // BAD
 ```
@@ -82,7 +82,7 @@ items.push(newItem)     // BAD
 ### Error Handling
 
 ```typescript
-// �?GOOD: Comprehensive error handling
+// 鉁?GOOD: Comprehensive error handling
 async function fetchData(url: string) {
   try {
     const response = await fetch(url)
@@ -98,7 +98,7 @@ async function fetchData(url: string) {
   }
 }
 
-// �?BAD: No error handling
+// 鉂?BAD: No error handling
 async function fetchData(url) {
   const response = await fetch(url)
   return response.json()
@@ -108,14 +108,14 @@ async function fetchData(url) {
 ### Async/Await Best Practices
 
 ```typescript
-// �?GOOD: Parallel execution when possible
+// 鉁?GOOD: Parallel execution when possible
 const [users, markets, stats] = await Promise.all([
   fetchUsers(),
   fetchMarkets(),
   fetchStats()
 ])
 
-// �?BAD: Sequential when unnecessary
+// 鉂?BAD: Sequential when unnecessary
 const users = await fetchUsers()
 const markets = await fetchMarkets()
 const stats = await fetchStats()
@@ -124,7 +124,7 @@ const stats = await fetchStats()
 ### Type Safety
 
 ```typescript
-// �?GOOD: Proper types
+// 鉁?GOOD: Proper types
 interface Market {
   id: string
   name: string
@@ -136,7 +136,7 @@ function getMarket(id: string): Promise<Market> {
   // Implementation
 }
 
-// �?BAD: Using 'any'
+// 鉂?BAD: Using 'any'
 function getMarket(id: any): Promise<any> {
   // Implementation
 }
@@ -147,7 +147,7 @@ function getMarket(id: any): Promise<any> {
 ### Component Structure
 
 ```typescript
-// �?GOOD: Functional component with types
+// 鉁?GOOD: Functional component with types
 interface ButtonProps {
   children: React.ReactNode
   onClick: () => void
@@ -172,7 +172,7 @@ export function Button({
   )
 }
 
-// �?BAD: No types, unclear structure
+// 鉂?BAD: No types, unclear structure
 export function Button(props) {
   return <button onClick={props.onClick}>{props.children}</button>
 }
@@ -181,7 +181,7 @@ export function Button(props) {
 ### Custom Hooks
 
 ```typescript
-// �?GOOD: Reusable custom hook
+// 鉁?GOOD: Reusable custom hook
 export function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value)
 
@@ -203,25 +203,25 @@ const debouncedQuery = useDebounce(searchQuery, 500)
 ### State Management
 
 ```typescript
-// �?GOOD: Proper state updates
+// 鉁?GOOD: Proper state updates
 const [count, setCount] = useState(0)
 
 // Functional update for state based on previous state
 setCount(prev => prev + 1)
 
-// �?BAD: Direct state reference
+// 鉂?BAD: Direct state reference
 setCount(count + 1)  // Can be stale in async scenarios
 ```
 
 ### Conditional Rendering
 
 ```typescript
-// �?GOOD: Clear conditional rendering
+// 鉁?GOOD: Clear conditional rendering
 {isLoading && <Spinner />}
 {error && <ErrorMessage error={error} />}
 {data && <DataDisplay data={data} />}
 
-// �?BAD: Ternary hell
+// 鉂?BAD: Ternary hell
 {isLoading ? <Spinner /> : error ? <ErrorMessage error={error} /> : data ? <DataDisplay data={data} /> : null}
 ```
 
@@ -244,7 +244,7 @@ GET /api/markets?status=active&limit=10&offset=0
 ### Response Format
 
 ```typescript
-// �?GOOD: Consistent response structure
+// 鉁?GOOD: Consistent response structure
 interface ApiResponse<T> {
   success: boolean
   data?: T
@@ -275,7 +275,7 @@ return NextResponse.json({
 ```typescript
 import { z } from 'zod'
 
-// �?GOOD: Schema validation
+// 鉁?GOOD: Schema validation
 const CreateMarketSchema = z.object({
   name: z.string().min(1).max(200),
   description: z.string().min(1).max(2000),
@@ -307,21 +307,21 @@ export async function POST(request: Request) {
 
 ```
 src/
-├── app/                    # Next.js App Router
-�?  ├── api/               # API routes
-�?  ├── markets/           # Market pages
-�?  └── (auth)/           # Auth pages (route groups)
-├── components/            # React components
-�?  ├── ui/               # Generic UI components
-�?  ├── forms/            # Form components
-�?  └── layouts/          # Layout components
-├── hooks/                # Custom React hooks
-├── lib/                  # Utilities and configs
-�?  ├── api/             # API clients
-�?  ├── utils/           # Helper functions
-�?  └── constants/       # Constants
-├── types/                # TypeScript types
-└── styles/              # Global styles
+鈹溾攢鈹? app/                    # Next.js App Router
+鈹?  鈹溾攢鈹? api/               # API routes
+鈹?  鈹溾攢鈹? markets/           # Market pages
+鈹?  鈹斺攢鈹? (auth)/           # Auth pages (route groups)
+鈹溾攢鈹? components/            # React components
+鈹?  鈹溾攢鈹? ui/               # Generic UI components
+鈹?  鈹溾攢鈹? forms/            # Form components
+鈹?  鈹斺攢鈹? layouts/          # Layout components
+鈹溾攢鈹? hooks/                # Custom React hooks
+鈹溾攢鈹? lib/                  # Utilities and configs
+鈹?  鈹溾攢鈹? api/             # API clients
+鈹?  鈹溾攢鈹? utils/           # Helper functions
+鈹?  鈹斺攢鈹? constants/       # Constants
+鈹溾攢鈹? types/                # TypeScript types
+鈹斺攢鈹? styles/              # Global styles
 ```
 
 ### File Naming
@@ -338,14 +338,14 @@ types/market.types.ts         # camelCase with .types suffix
 ### When to Comment
 
 ```typescript
-// �?GOOD: Explain WHY, not WHAT
+// 鉁?GOOD: Explain WHY, not WHAT
 // Use exponential backoff to avoid overwhelming the API during outages
 const delay = Math.min(1000 * Math.pow(2, retryCount), 30000)
 
 // Deliberately using mutation here for performance with large arrays
 items.push(newItem)
 
-// �?BAD: Stating the obvious
+// 鉂?BAD: Stating the obvious
 // Increment counter by 1
 count++
 
@@ -385,12 +385,12 @@ export async function searchMarkets(
 ```typescript
 import { useMemo, useCallback } from 'react'
 
-// �?GOOD: Memoize expensive computations
+// 鉁?GOOD: Memoize expensive computations
 const sortedMarkets = useMemo(() => {
   return markets.sort((a, b) => b.volume - a.volume)
 }, [markets])
 
-// �?GOOD: Memoize callbacks
+// 鉁?GOOD: Memoize callbacks
 const handleSearch = useCallback((query: string) => {
   setSearchQuery(query)
 }, [])
@@ -401,7 +401,7 @@ const handleSearch = useCallback((query: string) => {
 ```typescript
 import { lazy, Suspense } from 'react'
 
-// �?GOOD: Lazy load heavy components
+// 鉁?GOOD: Lazy load heavy components
 const HeavyChart = lazy(() => import('./HeavyChart'))
 
 export function Dashboard() {
@@ -416,13 +416,13 @@ export function Dashboard() {
 ### Database Queries
 
 ```typescript
-// �?GOOD: Select only needed columns
+// 鉁?GOOD: Select only needed columns
 const { data } = await supabase
   .from('markets')
   .select('id, name, status')
   .limit(10)
 
-// �?BAD: Select everything
+// 鉂?BAD: Select everything
 const { data } = await supabase
   .from('markets')
   .select('*')
@@ -449,12 +449,12 @@ test('calculates similarity correctly', () => {
 ### Test Naming
 
 ```typescript
-// �?GOOD: Descriptive test names
+// 鉁?GOOD: Descriptive test names
 test('returns empty array when no markets match query', () => { })
 test('throws error when OpenAI API key is missing', () => { })
 test('falls back to substring search when Redis unavailable', () => { })
 
-// �?BAD: Vague test names
+// 鉂?BAD: Vague test names
 test('works', () => { })
 test('test search', () => { })
 ```
@@ -465,12 +465,12 @@ Watch for these anti-patterns:
 
 ### 1. Long Functions
 ```typescript
-// �?BAD: Function > 50 lines
+// 鉂?BAD: Function > 50 lines
 function processMarketData() {
   // 100 lines of code
 }
 
-// �?GOOD: Split into smaller functions
+// 鉁?GOOD: Split into smaller functions
 function processMarketData() {
   const validated = validateData()
   const transformed = transformData(validated)
@@ -480,7 +480,7 @@ function processMarketData() {
 
 ### 2. Deep Nesting
 ```typescript
-// �?BAD: 5+ levels of nesting
+// 鉂?BAD: 5+ levels of nesting
 if (user) {
   if (user.isAdmin) {
     if (market) {
@@ -493,7 +493,7 @@ if (user) {
   }
 }
 
-// �?GOOD: Early returns
+// 鉁?GOOD: Early returns
 if (!user) return
 if (!user.isAdmin) return
 if (!market) return
@@ -505,11 +505,11 @@ if (!hasPermission) return
 
 ### 3. Magic Numbers
 ```typescript
-// �?BAD: Unexplained numbers
+// 鉂?BAD: Unexplained numbers
 if (retryCount > 3) { }
 setTimeout(callback, 500)
 
-// �?GOOD: Named constants
+// 鉁?GOOD: Named constants
 const MAX_RETRIES = 3
 const DEBOUNCE_DELAY_MS = 500
 

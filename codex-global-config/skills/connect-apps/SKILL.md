@@ -63,9 +63,9 @@ If it works, you're connected!
 
 ## Troubleshooting
 
-- **"Plugin not found"** â†?Make sure you ran `/plugin install composio-toolrouter`
-- **"Need to authorize"** â†?Click the OAuth link Claude provides, then say "done"
-- **Action failed** â†?Check you have permissions in the target app
+- **"Plugin not found"** éˆ«?Make sure you ran `/plugin install composio-toolrouter`
+- **"Need to authorize"** éˆ«?Click the OAuth link Claude provides, then say "done"
+- **Action failed** éˆ«?Check you have permissions in the target app
 
 ---
 

@@ -206,7 +206,7 @@ When a user requests writing assistance:
    ```markdown
    # Feedback: [Section Name]
    
-   ## What Works Well �?
+   ## What Works Well 鉁?
    - [Strength 1]
    - [Strength 2]
    - [Strength 3]
@@ -214,20 +214,20 @@ When a user requests writing assistance:
    ## Suggestions for Improvement
    
    ### Clarity
-   - [Specific issue] �?[Suggested fix]
-   - [Complex sentence] �?[Simpler alternative]
+   - [Specific issue] 鈫?[Suggested fix]
+   - [Complex sentence] 鈫?[Simpler alternative]
    
    ### Flow
-   - [Transition issue] �?[Better connection]
-   - [Paragraph order] �?[Suggested reordering]
+   - [Transition issue] 鈫?[Better connection]
+   - [Paragraph order] 鈫?[Suggested reordering]
    
    ### Evidence
-   - [Claim needing support] �?[Add citation or example]
-   - [Generic statement] �?[Make more specific]
+   - [Claim needing support] 鈫?[Add citation or example]
+   - [Generic statement] 鈫?[Make more specific]
    
    ### Style
-   - [Tone inconsistency] �?[Match your voice better]
-   - [Word choice] �?[Stronger alternative]
+   - [Tone inconsistency] 鈫?[Match your voice better]
+   - [Word choice] 鈫?[Stronger alternative]
    
    ## Specific Line Edits
    
@@ -344,7 +344,7 @@ When a user requests writing assistance:
    - [ ] Call to action present
    - [ ] Proofread for typos
    
-   Ready to publish! 🚀
+   Ready to publish! 馃殌
    ```
 
 ## Examples
@@ -406,7 +406,7 @@ All added to your outline with proper citations.
 > "Last month, I asked AI to analyze 500 customer interviews. It took 30 minutes instead of 3 weeks. Product management will never be the same."
 
 **Option 2 (Question)**:
-> "What if you could talk to every customer, read every review, and analyze every support ticket—all before your morning coffee?"
+> "What if you could talk to every customer, read every review, and analyze every support ticket鈥攁ll before your morning coffee?"
 
 **Option 3 (Story)**:
 > "Sarah spent two weeks building the wrong feature. Not because she didn't understand her users, but because she couldn't process the hundreds of interviews fast enough to spot the pattern."
@@ -419,7 +419,7 @@ All added to your outline with proper citations.
 ```markdown
 # Feedback: Common Mistakes Section
 
-## What Works Well �?
+## What Works Well 鉁?
 - Strong examples (the Slack notification story)
 - Clear structure (3 mistakes, clean layout)
 - Practical advice for each mistake
@@ -440,7 +440,7 @@ The third mistake would benefit from evidence:
 > "[Add citation]: Studies show teams without regular user contact are 3x more likely to build unused features [needs source]"
 
 ### Flow Improvement
-Consider reordering: Mistake 3 �?Mistake 2 �?Mistake 1
+Consider reordering: Mistake 3 鈫?Mistake 2 鈫?Mistake 1
 This builds from small to big impact.
 
 Ready for the next section!
@@ -451,9 +451,9 @@ Ready for the next section!
 ### Blog Post Workflow
 1. Outline together
 2. Research key points
-3. Write introduction �?get feedback
-4. Write body sections �?feedback each
-5. Write conclusion �?final review
+3. Write introduction 鈫?get feedback
+4. Write body sections 鈫?feedback each
+5. Write conclusion 鈫?final review
 6. Polish and edit
 
 ### Newsletter Workflow
@@ -495,15 +495,15 @@ Recommended structure for writing projects:
 
 ```
 ~/writing/article-name/
-├── outline.md          # Your outline
-├── research.md         # All research and citations
-├── draft-v1.md         # First draft
-├── draft-v2.md         # Revised draft
-├── final.md            # Publication-ready
-├── feedback.md         # Collected feedback
-└── sources/            # Reference materials
-    ├── study1.pdf
-    └── article2.md
+鈹溾攢鈹? outline.md          # Your outline
+鈹溾攢鈹? research.md         # All research and citations
+鈹溾攢鈹? draft-v1.md         # First draft
+鈹溾攢鈹? draft-v2.md         # Revised draft
+鈹溾攢鈹? final.md            # Publication-ready
+鈹溾攢鈹? feedback.md         # Collected feedback
+鈹斺攢鈹? sources/            # Reference materials
+    鈹溾攢鈹? study1.pdf
+    鈹斺攢鈹? article2.md
 ```
 
 ## Best Practices

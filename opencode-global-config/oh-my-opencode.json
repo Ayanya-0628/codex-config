@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "disabled_agents": [
+    "sisyphus",
+    "atlas"
+  ],
+  "sisyphus_agent": {
+    "disabled": false,
+    "default_builder_enabled": true,
+    "planner_enabled": true,
+    "replace_plan": true
+  },
+  "agents": {
+    "build": {
+      "mode": "primary",
+      "description": "Build mode with recorder gate",
+      "skills": [
+        "continuous-learning",
+        "progress-gate-recorder"
+      ],
+      "prompt_append": "Hard gate: every completed task MUST append updates to .sisyphus/progress.md and .sisyphus/requirements.md. If either file is not updated, task is NOT complete. If user asks segmented polish/review/verification/parallel processing (keywords: 润色, 分段, 核对, 并行), immediately switch to multi-agent parallel workflow in current session."
+    },
+    "plan": {
+      "mode": "primary",
+      "description": "Plan mode with recorder gate",
+      "skills": [
+        "continuous-learning",
+        "progress-gate-recorder"
+      ],
+      "prompt_append": "All plans must include explicit recorder actions: requirements update + progress update checkpoints. A plan without ledger updates is invalid."
+    }
+  }
+}
